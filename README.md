@@ -7,10 +7,10 @@ Upon template creation, launch of the template as root user is required. Meanwhi
 
 ```
 sudo cp -a waydroid/ /srv/salt/
-sudo qubesctl states.apply waydroid.template
-sudo qubesctl --skip-dom0 --templates=d13m-waydroid waydroid.template
+sudo qubesctl state.apply waydroid.template
+sudo qubesctl --skip-dom0 --templates=d13m-waydroid state.apply waydroid.template
 qvm-run --pass-io -u root d13m-waydroid
-sudo qubesctl states.apply waydroid.qvm
+sudo qubesctl state.apply waydroid.qvm
 ```
 
 ## License
